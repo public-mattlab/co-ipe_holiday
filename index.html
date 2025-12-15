@@ -3,53 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holiday Party 2025</title>
+    <title>🎄 CO-IPE Holiday Fest 2025 🎄</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b3d2e; color: white; margin: 0; text-align: center; }
-        header { background: #a62c2b; padding: 50px 20px; border-bottom: 5px solid #d4af37; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .card { background: white; color: #333; border-radius: 15px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        h1, h2 { text-transform: uppercase; letter-spacing: 2px; }
-        .raffle-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; text-align: left; }
-        .raffle-item { background: #f0f0f0; padding: 10px; border-radius: 8px; border-left: 5px solid #a62c2b; }
-        .warning { color: #a62c2b; font-weight: bold; font-style: italic; }
-        .btn { display: inline-block; padding: 15px 30px; background: #d4af37; color: #0b3d2e; text-decoration: none; font-weight: bold; border-radius: 50px; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #fff; transform: scale(1.05); }
-        .emoji { font-size: 1.5rem; }
+        :root { --holiday-red: #a62c2b; --holiday-green: #1a3a3a; --gold: #d4af37; --bg-light: #fdf2f2; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--holiday-green); color: #f4f4f4; margin: 0; text-align: center; line-height: 1.6; }
+        header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1543258103-a62bdc069871?q=80&w=2000&auto=format&fit=crop'); background-size: cover; padding: 60px 20px; border-bottom: 8px solid var(--gold); }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        .card { background: #ffffff; color: #222; border-radius: 8px; padding: 25px; margin: 25px 0; border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { font-size: 3rem; margin: 0; text-shadow: 2px 2px var(--holiday-red); color: white; }
+        h2 { color: var(--holiday-red); border-bottom: 2px solid #eee; padding-bottom: 10px; text-transform: uppercase; margin-top: 0; }
+        
+        /* Countdown Styles */
+        #countdown { display: flex; justify-content: center; gap: 15px; margin: 25px 0; flex-wrap: wrap; }
+        .time-box { background: var(--holiday-red); color: white; padding: 15px; border-radius: 8px; min-width: 80px; border: 2px solid var(--gold); }
+        .time-box span { display: block; font-size: 2rem; font-weight: bold; }
+        .time-box label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .raffle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .raffle-item { background: var(--bg-light); padding: 15px; border-radius: 5px; border: 1px dashed var(--holiday-red); font-weight: bold; }
+        
+        .payment-info { background: #fffbe6; border: 2px solid var(--gold); padding: 20px; border-radius: 8px; font-weight: bold; color: #856404; margin-bottom: 15px; }
+        .zelle-num { font-size: 1.5rem; color: #6d4aff; display: block; margin-top: 10px; }
+        
+        .btn { display: inline-block; padding: 15px 30px; background: var(--holiday-red); color: white; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 10px; transition: 0.3s; }
+        .btn-video { background: #555; font-size: 0.9rem; }
+        .btn:hover { background: var(--gold); color: var(--holiday-green); transform: translateY(-2px); }
+        
+        .badge { background: var(--holiday-red); color: white; padding: 5px 10px; border-radius: 4px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>🎄 The Holiday Bash 🎄</h1>
-    <p>Eat, Drink, and be Merry (or else!)</p>
+    <h1>PROST & MERRY CHRISTMAS!</h1>
+    <p style="font-size: 1.2rem; color: var(--gold);">The CO-IPE Holiday Fest & Stein-Off</p>
+    
+    <div id="countdown">
+        <div class="time-box"><span id="days">00</span><label>Days</label></div>
+        <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
+        <div class="time-box"><span id="minutes">00</span><label>Mins</label></div>
+        <div class="time-box"><span id="seconds">00</span><label>Secs</label></div>
+    </div>
 </header>
 
 <div class="container">
-    <div class="card">
-        <h2>🎟️ Ticket Status</h2>
-        <p><strong>20 Sold | 20 Remaining</strong></p>
-        <p>Don't be the reason we have to share one appetizer. RSVP now!</p>
-        <a href="#" class="btn">SECURE MY TICKET</a>
-    </div>
 
     <div class="card">
-        <h2>🎁 Yankee Swap & Baskets</h2>
-        <p>Bring a wrapped gift (Min 20€/$20). <span class="warning">Watch the "Office" episode—no homemade potholders!</span></p>
-        <p><strong>Division Baskets:</strong> Drop them off at the office ASAP for display!</p>
+        <h2>📍 Venue & Tickets</h2>
+        <p><strong>Dec 18, 2025 @ 18:00</strong><br>Swabian Event Center, Patch Barracks, Stuttgart</p>
+        
+        <div class="payment-info">
+            🎟️ TICKETS: $25 / 25€ (Plus Tip!)<br>
+            <span style="font-size: 0.9rem; font-weight: normal;">Pay via Cash or Zelle:</span>
+            <span class="zelle-num">📱 210-452-7284</span>
+        </div>
+        
+        <p><strong>Current Status:</strong> <span class="badge">20 Sold</span> <span class="badge" style="background:#555">20 Remaining</span></p>
+    </div>
+
+    <div class="card" style="background: #e8f4f0;">
+        <h2>🍺 The "Oktber-Sweater" Theme</h2>
+        <p>Break out the <strong>Oktoberfest Vests</strong> and Dirndls, then layer on your <strong>Ugliest Holiday Sweater</strong>. It's a clash of cultures, and it's mandatory.</p>
+        <p>⚠️ <strong>BYO-STEIN:</strong> If you have one, bring it Thursday!</p>
     </div>
 
     <div class="card">
         <h2>🎰 The Raffle Loot</h2>
-        <div class="raffle-list">
+        <div class="raffle-grid">
             <div class="raffle-item">💳 2x $100 BX Cards</div>
-            <div class="raffle-item">🧙‍♂️ HP Lego Book Nook</div>
-            <div class="raffle-item">🎧 AirPods 4</div>
+            <div class="raffle-item">🧙‍♂️ HP Book Nook LEGO</div>
+            <div class="raffle-item">🎧 Apple AirPods 4</div>
             <div class="raffle-item">🥃 WhistlePig 12 Year</div>
-            <div class="raffle-item">🧺 Division Baskets</div>
-            <div class="raffle-item">✨ And More!</div>
+            <div class="raffle-item">🎄 Division Gift Baskets</div>
         </div>
     </div>
 
     <div class="card">
-        <h2>
+        <h2>🎁 Yankee Swap Rules</h2>
+        <p>Minimum Gift Value: <strong>$20 / 20€</strong></p>
+        <p>Don't be the person who ruins Christmas with a bad gift. Study the tactics of the masters:</p>
+        <a href="https://www.youtube.com/watch?v=R98pYvAszHk" target="_blank" class="btn btn-video">📺 Watch Yankee Swap Reference</a>
+        <p style="font-size: 0.8rem; margin-top: 10px; font-style: italic;">Division Baskets are also due! Bring them in!</p>
+    </div>
+
+    <div class="card" style="background: var(--holiday-red); color: white;">
+        <h2>🎅 Santa & The Elf</h2>
+        <p><strong>Col Perrie</strong> is our Santa. To the rest of CO-IPE: The Elf costume is waiting for a volunteer. Don't make us pick one for you.</p>
+    </div>
+
+</div>
+
+<script>
+    const eventDate = new Date("December 18, 2025 18:00:00").getTime();
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "<h3>PROST! THE FEST HAS BEGUN! 🍺</h3>";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
